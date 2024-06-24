@@ -1,6 +1,8 @@
 # 森空岛签到
 
-## 推荐使用自行架设的docker服务器实现相关操作
+## 推荐使用自行架设的 docker 服务器实现相关操作
+
+## 推荐使用自行架设的 docker 服务器实现相关操作
 
 纯 Shell 实现的森空岛各版面登岛检票和明日方舟每日签到任务
 
@@ -8,8 +10,8 @@
 
 ## 前置需求
 
-* 脚本需要在 [Bash](https://www.gnu.org/software/bash) 环境下运行，Windows 用户请使用 [MSYS2](https://www.msys2.org)、[WSL2](https://learn.microsoft.com/zh-cn/windows/wsl/install) 或虚拟机等拥有 Bash 的环境运行
-* 脚本需要使用 [curl](https://curl.se)、[OpenSSL](https://www.openssl.org) 和 [jq](https://jqlang.github.io/jq) 这三个第三方软件包
+- 脚本需要在 [Bash](https://www.gnu.org/software/bash) 环境下运行，Windows 用户请使用 [MSYS2](https://www.msys2.org)、[WSL2](https://learn.microsoft.com/zh-cn/windows/wsl/install) 或虚拟机等拥有 Bash 的环境运行
+- 脚本需要使用 [curl](https://curl.se)、[OpenSSL](https://www.openssl.org) 和 [jq](https://jqlang.github.io/jq) 这三个第三方软件包
 
 ## 使用方法
 
@@ -76,7 +78,7 @@ services:
 
    点击 `Actions` -> 点击左侧 `Schedule` -> 点击 `Run workflow` -> 点击按钮 `Run workflow`
 
-***注意：如果仓库 60 天内没有活动，其计划 Actions 会被自动禁用，届时你需要手动重启一下（一般会发邮件通知你 Actions 禁用）***
+**_注意：如果仓库 60 天内没有活动，其计划 Actions 会被自动禁用，届时你需要手动重启一下（一般会发邮件通知你 Actions 禁用）_**
 
 ## 通知推送功能
 
@@ -98,15 +100,15 @@ services:
 
 你需要配置如下环境变量：
 
-|名字|作用|示例值|
-|:---:|:---:|:---:|
-|`SMTP_HOST`|SMTP 主机地址|-|
-|`SMTP_PORT`|SMTP 端口|一般来说是 `465` 或 `587`|
-|`SMTP_USER`|SMTP 用户名|一般是一个邮箱地址|
-|`SMTP_PASSWD`|SMTP 密码|-|
-|`SMTP_FROM`|发送者邮箱|一般来说应该和用户名一样|
-|`SMTP_TO`|接收者邮箱|-|
-|`SMTP_REAL_NAME`|发送者名字|-|
-|`SMTP_START_TLS`|启用全程 TLS|只能是 `on` 或 `off`|
+|       名字       |     作用      |          示例值           |
+| :--------------: | :-----------: | :-----------------------: |
+|   `SMTP_HOST`    | SMTP 主机地址 |             -             |
+|   `SMTP_PORT`    |   SMTP 端口   | 一般来说是 `465` 或 `587` |
+|   `SMTP_USER`    |  SMTP 用户名  |    一般是一个邮箱地址     |
+|  `SMTP_PASSWD`   |   SMTP 密码   |             -             |
+|   `SMTP_FROM`    |  发送者邮箱   | 一般来说应该和用户名一样  |
+|    `SMTP_TO`     |  接收者邮箱   |             -             |
+| `SMTP_REAL_NAME` |  发送者名字   |             -             |
+| `SMTP_START_TLS` | 启用全程 TLS  |   只能是 `on` 或 `off`    |
 
 对于白嫖 GitHub Actions 用户，配置环境变量的方法如 [Bark 推送](#bark-推送) 中的一样
